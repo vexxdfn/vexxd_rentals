@@ -9,6 +9,10 @@
 
 Vehicle rental desks. Players pay a deposit, and get it back based on the condition the vehicle is in when they return it. Desks, parking bays, vehicles and the refund rules are all set up in game.
 
+## Support
+
+discord.gg/TzNJ6Z92Y5
+
 ## Requirements
 
 - ox_lib
@@ -96,7 +100,3 @@ Rented vehicles carry the state bag `vexxdRental = true`, so other scripts can t
 ```lua
 if Entity(vehicle).state.vexxdRental then ... end
 ```
-
-## Support
-
-discord.gg/TzNJ6Z92Y5
