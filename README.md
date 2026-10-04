@@ -3,6 +3,7 @@
 <img width="1621" height="941" alt="rentalscript2" src="https://github.com/user-attachments/assets/ab38b5fe-15d0-4f91-855a-d066f045af51" />
 <img width="1658" height="923" alt="rentalscript1" src="https://github.com/user-attachments/assets/a96fbbd6-d066-48e3-8f09-8727c2f7f48a" />
 <img width="1829" height="956" alt="rentalscript" src="https://github.com/user-attachments/assets/20d22fb9-b6c9-40ff-b583-8b68321972d5" />
+
 # Rentals
 
 Vehicle rental desks. Players pay a deposit, and get it back based on the condition the vehicle is in when they return it. Desks, parking bays, vehicles and the refund rules are all set up in game.
