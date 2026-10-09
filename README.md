@@ -1,9 +1,11 @@
-<img width="1829" height="956" alt="rentalscript" src="https://github.com/user-attachments/assets/20d22fb9-b6c9-40ff-b583-8b68321972d5" />
-<img width="1621" height="941" alt="rentalscript2" src="https://github.com/user-attachments/assets/ab38b5fe-15d0-4f91-855a-d066f045af51" />
-<img width="1658" height="923" alt="rentalscript1" src="https://github.com/user-attachments/assets/a96fbbd6-d066-48e3-8f09-8727c2f7f48a" />
-<img width="1675" height="960" alt="rentalscript4" src="https://github.com/user-attachments/assets/373ab4fb-876b-41f9-aa3e-98e97276a702" />
-<img width="1838" height="983" alt="rentalscript3" src="https://github.com/user-attachments/assets/dd265189-688f-4421-b965-deb09831b438" />
-<img width="910" height="37" alt="rentalscriptresmon" src="https://github.com/user-attachments/assets/a025d0e8-367e-481a-9e76-159c988653c2" />
+<img width="1479" height="689" alt="image" src="https://github.com/user-attachments/assets/80c19433-e79f-4e2a-aa41-7aeb67f05045" />
+<img width="1513" height="734" alt="image" src="https://github.com/user-attachments/assets/2014a920-0648-4d45-8bff-1532f0b8ea51" />
+<img width="1104" height="746" alt="image" src="https://github.com/user-attachments/assets/2d19e8e8-8674-4109-bb76-22ad9ad14e9a" />
+<img width="1364" height="839" alt="image" src="https://github.com/user-attachments/assets/448801f5-5c41-4759-954a-b51a094d81a9" />
+
+
+
+
 
 # Rentals
 
