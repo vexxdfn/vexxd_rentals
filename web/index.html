@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>vexxd_rentals</title>
+<title>Rentals</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,18 +10,15 @@
 <div id="rent" class="screen" hidden>
   <div class="shell">
     <aside class="rail">
-      <div class="rail-brand">
-        <div class="mark" id="r-mark"></div>
-        <div><b id="r-title"></b><span id="r-sub"></span></div>
-      </div>
+      <div class="rail-brand"><b id="r-title"></b><span id="r-sub"></span></div>
       <nav id="r-cats"></nav>
       <div id="r-policy"></div>
       <div class="rail-foot" id="r-wallet"></div>
     </aside>
     <div class="shell-main">
       <div class="shell-head">
-        <div class="shell-title"><span class="shell-icon" id="r-icon"></span><h1 id="r-head"></h1></div>
-        <div class="shell-actions"><button class="btn btn-ghost" id="r-close">Close</button></div>
+        <div class="shell-title"><h1 id="r-head"></h1></div>
+        <div class="shell-actions"><button class="btn btn-icon" id="r-close" aria-label="Close"></button></div>
       </div>
       <div class="rent-body">
         <div class="fleet" id="r-fleet"></div>
@@ -36,10 +33,7 @@
 <div id="admin" class="screen" hidden>
   <div class="shell">
     <aside class="rail">
-      <div class="rail-brand">
-        <div class="mark" id="ad-mark"></div>
-        <div><b>Rentals</b><span>Admin panel</span></div>
-      </div>
+      <div class="rail-brand"><b>Rentals</b><span>Admin panel</span></div>
       <nav id="ad-tabs"></nav>
     </aside>
     <div class="ed-list" id="ad-list">
@@ -48,7 +42,7 @@
     </div>
     <div class="shell-main">
       <div class="shell-head">
-        <div class="shell-title"><span class="shell-icon" id="ad-icon"></span><h1 id="ad-title"></h1></div>
+        <div class="shell-title"><h1 id="ad-title"></h1></div>
         <div class="shell-actions" id="ad-actions"></div>
       </div>
       <div class="shell-body" id="ad-body"></div>

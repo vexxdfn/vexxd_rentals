@@ -15,27 +15,27 @@ const post = (name, body = {}) => fetch(`https://${RES}/${name}`, {
     method: 'POST', headers: { 'Content-Type': 'application/json; charset=UTF-8' }, body: JSON.stringify(body),
 }).then((r) => r.json()).catch(() => ({}));
 
-const svg = (d, size = 16) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const svg = (d, size = 16) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const ICONS = {
-    car: '<path d="M5 11l1.5-4.5h11L19 11M3 11h18v6H3zM7 17v2M17 17v2M7 14h.01M17 14h.01"/>',
-    bike: '<circle cx="5.5" cy="16.5" r="3"/><circle cx="18.5" cy="16.5" r="3"/><path d="M5.5 16.5L9 9h5l4.5 7.5M9 9l3 7.5h6.5M14 6h3l1 3"/>',
-    bicycle: '<circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5l4-8h6l3 8M9.5 8.5l3 8M8 6h3M15.5 8.5L15 6h2"/>',
-    truck: '<path d="M2 7h11v9H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>',
-    boat: '<path d="M3 15h18l-2.5 5h-13zM12 3v12M12 5l6 7h-6M2 22c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/>',
-    key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M14 9l2 2"/>',
-    pin: '<path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
-    cog: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.900 4.900l2.100 2.100M17 17l2.100 2.100M4.900 19.100L7 17M17 7l2.100-2.100"/>',
-    plus: '<path d="M12 5v14M5 12h14"/>',
-    grid: '<path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/>',
+    car: '<path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/>',
+    bike: '<path d="M2 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M16 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M7.5 14h5l4 -4h-10.5m1.5 4l4 -4"/><path d="M13 6h2l1.5 3l2 4"/>',
+    bicycle: '<path d="M2 18a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M16 18a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M12 19v-4l-3 -3l5 -4l2 3h3"/><path d="M13.007 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>',
+    truck: '<path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"/>',
+    boat: '<path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1"/><path d="M4 18l-1 -3h18l-1 3"/><path d="M11 12h7l-7 -9v9"/><path d="M8 7l-2 5"/>',
+    key: '<path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0"/><path d="M15 9h.01"/>',
+    pin: '<path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/>',
+    cog: '<path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>',
+    plus: '<path d="M12 5l0 14"/><path d="M5 12l14 0"/>',
+    grid: '<path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"/>',
+    x: '<path d="M18 6l-12 12"/><path d="M6 6l12 12"/>',
 };
-for (const k of Object.keys(ICONS)) ICONS[k] = ICONS[k].replace(/(\d\.\d)00\b/g, '$1');
 const ico = (name, size) => svg(ICONS[name] || ICONS.car, size);
 const CATS = { car: 'Cars', bike: 'Motorcycles', bicycle: 'Bicycles', truck: 'Trucks', boat: 'Boats' };
 
 const settings = { title: 'Vehicle Rentals', account: 'bank', fullAbove: 90, noneBelow: 20, fee: 0, images: 'https://docs.fivem.net/vehicles/%s.webp' };
-const tone = (c) => (c >= settings.fullAbove ? 'var(--ok)' : (c <= settings.noneBelow ? 'var(--red)' : '#f5b83d'));
-const gauge = (pct, label) => `<div class="gauge"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="7"/>
-    <circle cx="60" cy="60" r="52" fill="none" stroke="${tone(pct)}" stroke-width="7" stroke-dasharray="${(326.7 * Math.max(0, Math.min(100, pct)) / 100).toFixed(1)} 326.7"/></svg>
+const tone = (c) => (c >= settings.fullAbove ? 'var(--ok)' : (c <= settings.noneBelow ? 'var(--red)' : 'var(--amber)'));
+const gauge = (pct, label) => `<div class="gauge"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--s3)" stroke-width="6"/>
+    <circle cx="60" cy="60" r="52" fill="none" stroke="${tone(pct)}" stroke-width="6" stroke-dasharray="${(326.7 * Math.max(0, Math.min(100, pct)) / 100).toFixed(1)} 326.7"/></svg>
     <div class="inner"><div><b>${pct}%</b><span>${label}</span></div></div></div>`;
 const shot = (v, size) => `<img src="${esc(v.image || settings.images.replace('%s', encodeURIComponent(v.model)))}" data-cat="${esc(v.category || 'car')}" data-size="${size}" draggable="false">`;
 
@@ -66,7 +66,7 @@ function rtOpen(data) {
     rt.busy = false;
     rtLoad(data);
     $('#receipt').hidden = true;
-    $('#r-mark').innerHTML = ico('key', 18);
+    $('#r-close').innerHTML = ico('x', 18);
     $('#rent').hidden = false;
     rtRender();
 }
@@ -140,13 +140,13 @@ function detailRental(r) {
         body = `<div class="deal"><div class="deal-row"><span>Deposit held</span><b>${money(r.price)}</b></div>
             <p>We can't find this vehicle anywhere. If it is gone for good, report it lost to close the rental. The deposit is kept.</p></div><div class="gap"></div>`;
     } else {
-        body = `${gauge(r.condition, 'Condition')}${scale(r.condition)}
+        body = `${scale(r.condition)}
             <div class="deal"><div class="deal-row"><span>Refund right now</span><b class="${r.refund >= r.price ? 'ok' : ''}">${money(r.refund)}</b></div>
                 <p>From a <b>${money(r.price)}</b> deposit.${r.near ? '' : ' Park it next to the desk to hand it back.'}</p></div>
             <div class="gap"></div>
             <button class="btn btn-primary go" id="r-return" ${r.near ? '' : 'disabled'}>${r.near ? `Return · get ${money(r.refund)} back` : 'Vehicle is too far away'}</button>`;
     }
-    return `<div class="hero sm">${shot(v, 70)}</div>
+    return `<div class="duo"><div class="hero sm">${shot(v, 70)}</div>${r.exists ? gauge(r.condition, 'Condition') : ''}</div>
         <div class="d-name">${esc(r.label)}</div>
         <div class="d-sub">${esc(r.plate)} · rented ${time}</div>
         ${body}
@@ -164,7 +164,6 @@ function rtRender() {
         <em>${c === 'all' ? list.length : list.filter((v) => v.category === c).length}</em></button>`).join('') : '';
     $('#r-policy').innerHTML = policy();
     $('#r-wallet').innerHTML = `<div class="wallet"><span>${settings.account === 'cash' ? 'Cash' : 'Bank'}</span><b>${money(d.money)}</b></div>`;
-    $('#r-icon').innerHTML = ico(r ? 'key' : 'car', 20);
     $('#r-head').textContent = r ? 'Your rental' : 'Choose a vehicle';
     const shown = list.filter((v) => rt.cat === 'all' || v.category === rt.cat);
     $('#r-fleet').innerHTML = shown.map((v, i) => `<div class="car ${!r && rt.sel === v.id ? 'on' : ''} ${r || v.valid === false ? 'off' : ''}" data-car="${esc(v.id)}" style="animation-delay:${Math.min(i, 8) * .03}s">
@@ -178,7 +177,7 @@ function rtRender() {
 function receipt(rc) {
     const kept = rc.price - rc.refund;
     const full = kept <= 0;
-    const colour = full ? 'var(--ok)' : (rc.refund > 0 ? '#f5b83d' : 'var(--red)');
+    const colour = full ? 'var(--ok)' : (rc.refund > 0 ? 'var(--amber)' : 'var(--red)');
     const text = full ? 'Clean return. The whole deposit is back with you.' : (rc.refund > 0 ? 'It came back damaged, so part of the deposit was kept for repairs.' : 'It came back too damaged to refund anything.');
     $('#rc-panel').innerHTML = `<div class="verdict">${gauge(rc.condition, 'Condition')}
             <div><div class="stamp" style="color:${colour}">Returned</div><p>${text}</p></div></div>
@@ -269,7 +268,6 @@ function adOpen(data) {
     ad.dirty = {};
     adLoad(data);
     ad.sel = ad.lists.locations.length ? 0 : null;
-    $('#ad-mark').innerHTML = ico('key', 18);
     $('#admin').hidden = false;
     adRender();
 }
@@ -358,9 +356,8 @@ function adRender() {
     const tabs = [...Object.entries(KINDS).map(([id, k]) => [id, k.label, k.icon, ad.lists[id].length]), ['settings', 'Settings', 'cog', '']];
     $('#ad-tabs').innerHTML = tabs.map(([id, label, icon, n]) => `<button class="rail-btn ${ad.tab === id ? 'active' : ''}" data-adtab="${id}">${ico(icon)}<span>${label}</span><em>${n}</em></button>`).join('');
     $('#ad-list').hidden = !isList();
-    let actions = '<button class="btn btn-ghost" id="ad-close">Close</button>';
+    let actions = `<button class="btn btn-icon" id="ad-close" aria-label="Close">${ico('x', 18)}</button>`;
     if (!isList()) {
-        $('#ad-icon').innerHTML = ico('cog', 20);
         $('#ad-title').textContent = 'Settings';
         $('#ad-body').innerHTML = adSettings();
     } else {
@@ -372,7 +369,6 @@ function adRender() {
         $('#ad-rows').innerHTML = list.map((x, i) => `<button class="ed-row ${ad.sel === i ? 'on' : ''}" data-row="${i}"><div><b>${esc(kind.name(x))}</b><span>${esc(kind.sub(x))}</span></div></button>`).join('')
             || '<div class="empty">Nothing here yet.</div>';
         const x = cur();
-        $('#ad-icon').innerHTML = ico(kind.icon, 20);
         $('#ad-title').textContent = x ? kind.name(x) : kind.label;
         $('#ad-body').innerHTML = x ? adForm(x) : `<div class="card ed-empty"><p class="card-note">${ad.tab === 'locations' ? 'Stand where the rental desk should be and press New desk.' : 'Pick a vehicle on the left or add a new one.'} Nothing is live until you press Save.</p></div>`;
         if (x) actions = `<button class="btn btn-danger" id="ad-del">Delete</button>${actions}`;

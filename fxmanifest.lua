@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'Vexxd Scripts'
 description 'Rentals - vehicle rental desks with a deposit that is refunded by the condition the vehicle comes back in, set up in game. discord.gg/TzNJ6Z92Y5 for support'
-version '1.0.0'
+version '1.0.2'
 
 shared_scripts {
     '@ox_lib/init.lua',
