@@ -102,3 +102,11 @@ Rented vehicles carry the state bag `vexxdRental = true`, so other scripts can t
 ```lua
 if Entity(vehicle).state.vexxdRental then ... end
 ```
+
+## 💎 Paid Scripts
+
+Looking for more scripts? Check out the full collection of paid scripts available on my Tebex store!
+
+🛒 **[VEXXD SCRIPTS | Tebex Store](https://vexxd-scripts.tebex.store/)**
+
+
